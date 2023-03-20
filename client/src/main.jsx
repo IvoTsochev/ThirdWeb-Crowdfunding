@@ -6,7 +6,7 @@ import App from "./App";
 
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
 
-import "./styles/globals.css";
+import "./globals.css";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
