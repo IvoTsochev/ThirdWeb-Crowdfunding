@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import { StateContextProvider } from "./context";
 import App from "./App";
 
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
     <ThirdwebProvider activeChain={ChainId.Goerli}>
       <Router>
-        <App />
+        <StateContextProvider>
+          <App />
+        </StateContextProvider>
       </Router>
     </ThirdwebProvider>
   </React.StrictMode>
